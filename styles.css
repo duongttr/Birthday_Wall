@@ -274,3 +274,65 @@ body::before {
 .container a:hover {
     color: #2b2b2b;
 }
+
+
+@keyframes float {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(0px, -20px);
+    }
+    75% {
+        transform: translate(-10px, -10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.floating-text {
+    position: relative;
+    animation: float 5s ease-in-out infinite;
+}
+
+#bgm {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 2px solid #ff4d4d; /* Viền đỏ tình yêu */
+    border-radius: 10px;
+    background-color: #ffcccc; /* Màu nền controls hồng phấn */
+}
+
+/* Tùy chỉnh panel controls */
+#bgm::-webkit-media-controls-panel {
+    background-color: #ffcccc;
+}
+
+/* Tùy chỉnh nút play */
+#bgm::-webkit-media-controls-play-button {
+    background-color: #ff4d4d;
+    border-radius: 50%;
+}
+
+/* Tùy chỉnh thời gian hiển thị */
+#bgm::-webkit-media-controls-current-time-display,
+#bgm::-webkit-media-controls-time-remaining-display {
+    color: #ff4d4d; /* Màu chữ đỏ */
+}
+
+/* Tùy chỉnh thanh timeline */
+#bgm::-webkit-media-controls-timeline {
+    background-color: #ff9999; /* Màu hồng đậm */
+}
+
+/* Tùy chỉnh thanh âm lượng */
+#bgm::-webkit-media-controls-volume-slider {
+    background-color: #ff9999;
+}
+
+/* Thêm biểu tượng trái tim phía trên */
